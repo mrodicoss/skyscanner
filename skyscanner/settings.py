@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#_h+gar6x7^=j81^=j(+6#_wf6@afhy^ocd^(08wwd$*$y3^i7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['skyscanner-django.herokuapp.com']
 
 
 # Application definition
