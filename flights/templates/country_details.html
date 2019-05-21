@@ -1,0 +1,11 @@
+<div>
+	{% if data %}
+		name: {{data.0.name}}<br>
+		region: {{data.0.region}}<br>
+		subregion: {{data.0.subregion}}<br>
+		population: {{data.0.population}}<br>
+		native name: {{data.0.nativeName}}<br>
+	{% else %}
+		message: {{message}}
+	{% endif %}
+</div>

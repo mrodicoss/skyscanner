@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search flights</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+	<script src={% static "flights/js/locations.js" %}></script>
+</head>
+<body>
+<div>
+	<form method="POST">
+		<table >
+			{% csrf_token %}
+			{{form.as_table}}
+			<tr><td><input type="submit" name="Search" value="Search"></td></tr>
+		</table>
+	</form>
+</div>
+<div>
+	{% for quote in data.Quotes %}
+		<div>{{data.Carriers.0.Name}}</div>
+		<div>{{quote.OutboundLeg.OriginId}} -> {{quote.OutboundLeg.DestinationId}}</div>
+		<div>{{quote.OutboundLeg.DepartureDate}}</div>
+		<div>Price: {{quote.MinPrice}}{{data.Currencies.0.Symbol}}</div>
+	{% endfor %}
+</div>
+<div id="options"></div>
+<div id="origin-country"></div>
+<div id="destination-country"></div>
+</body>
+</html>
