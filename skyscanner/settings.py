@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#_h+gar6x7^=j81^=j(+6#_wf6@afhy^ocd^(08wwd$*$y3^i7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'skyscanner-django.herokuapp.com',
@@ -123,8 +123,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 
 RAPIDAPI_API_KEY = '5908a87257msh999fa4b31ebaa8ap143422jsn1f46950fbff4'

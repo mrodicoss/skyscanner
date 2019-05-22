@@ -52,7 +52,7 @@ function ajax_call_for_country_details(element){
         country: 'Croatia' //ili this.value - get parametri
       },
         success: function(result){//poziv callback funkcije koja ce se dogoditi u slucaju uspjeha
-          element.html(result); //isprazni div od prethodnih rezultata      
+          element.html(result); //isprazni/pregazi div (da ne naljepi i prethodne rezultate)     
         },
         error: function (xhr, ajaxOptions, thrownError) {
             console.log(xhr.status);
