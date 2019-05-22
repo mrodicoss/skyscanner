@@ -25,7 +25,10 @@ SECRET_KEY = '#_h+gar6x7^=j81^=j(+6#_wf6@afhy^ocd^(08wwd$*$y3^i7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['skyscanner-django.herokuapp.com']
+ALLOWED_HOSTS = [
+    'skyscanner-django.herokuapp.com',
+    'localhost',
+]
 
 
 # Application definition
