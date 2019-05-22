@@ -1,1 +1,1 @@
-web: gunicorn ime_projekta.wsgi --log-file -
+web: gunicorn skyscanner.wsgi --log-file -
